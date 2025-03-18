@@ -13,5 +13,5 @@ Host aws-ec2
   IdentityFile /Users/matteodevigili/Desktop/workshop/workshop.pem
 ```
 5. set-up:
-    - inport: git clone https://github.com/mattDevigili/insead-workshop.git
+    - import: git clone https://github.com/mattDevigili/insead-workshop.git
     - install mongodb: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
