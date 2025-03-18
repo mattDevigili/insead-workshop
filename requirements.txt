@@ -6,4 +6,5 @@ spacy
 tomotopy 
 matplotlib
 gensim
-pyLDAvis 
+pyLDAvis
+statsmodels 

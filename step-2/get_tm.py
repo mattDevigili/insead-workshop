@@ -2,12 +2,9 @@
 #--+ nlp
 import spacy
 nlp = spacy.load("en_core_web_lg")
-from tomotopy.coherence import Coherence
 from tomotopy.utils import Corpus
 from tomotopy import LDAModel
 #--+ other
-from itertools import chain
-from collections import Counter
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -41,29 +38,6 @@ class TomotopyLDA:
         # save for reuse
         if inplace_ is True:
             self.corpus.save(out_path)
-    
-    def get_coherence(self, min_, max_, delta_, seed=123):
-        """
-		params:
-			corpus_: text corpus
-			min_: min number of k to train LDA
-			max_: max number of k to train LDA
-			delta_: delta of variation to train the model
-			seed: reproducibility purposes
-		outcome:
-			a dictionary containing number of topics: coherence 
-			score
-		"""
-        cs = {}
-        for k in range(min_, max_, delta_):
-            print('Running model {}'.format(k))
-            for i in range(0, 50, 1):
-                lda_model = LDAModel(k=k, seed=seed, corpus=self.corpus)
-                lda_model.train(20, workers=1)
-            score = Coherence(lda_model, coherence='c_v').get_score()
-            cs[k] = score
-		# return
-        return cs
 
     def lda(self, k_, min_df=0, rm_top=0, verbose_=True):
         """LDA implementation

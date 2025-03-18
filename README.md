@@ -13,5 +13,7 @@ Host aws-ec2
   IdentityFile /Users/matteodevigili/Desktop/workshop/workshop.pem
 ```
 5. set-up:
-    - import: git clone https://github.com/mattDevigili/insead-workshop.git
-    - install mongodb: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+    - run: `git clone https://github.com/mattDevigili/insead-workshop.git`
+    - set-up vscode extensions (python, jupyter, mongodb, live server)
+    - run `bash set_up`
+4. have fun
