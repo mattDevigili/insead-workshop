@@ -5,4 +5,5 @@ jupyter
 spacy 
 tomotopy 
 matplotlib
-gensim  
+gensim
+pyLDAvis 
