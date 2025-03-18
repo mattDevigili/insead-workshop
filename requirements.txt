@@ -1,0 +1,8 @@
+pandas
+scrapy
+pymongo
+jupyter
+spacy 
+tomotopy 
+matplotlib
+gensim  
